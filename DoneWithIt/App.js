@@ -6,11 +6,8 @@ export default function App() {
 
   return (
    <SafeAreaView style={styles.container}>
-    <Button title='Click Me' color={"black"} onPress={()=> Alert.alert("The title", "Hey you modafaka", 
-    
-      [ { text : "Yes"},
-        {text : "No"}]
-    
+    <Button title='Click Me' color={"black"} onPress={()=> Alert.prompt("The title", "Hey you modafaka", 
+    text => console.log(text)
     )}/>
    </SafeAreaView>
   );
