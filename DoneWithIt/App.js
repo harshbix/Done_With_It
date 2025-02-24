@@ -10,7 +10,7 @@ const handlePress = () =>
   return (
     <View style={styles.container}>
       
-      {/* <Text >Hello World!</Text> */}
+      <Text >Hello World!</Text>
       <Image
       source={  
          {width: 400,
