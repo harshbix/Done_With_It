@@ -11,7 +11,8 @@ const handlePress = () =>
     <View style={styles.container}>
       
       {/* <Text >Hello World!</Text> */}
-      <Image source={  
+      <Image
+      source={  
          {width: 400,
         height: 300,
         uri: "https://picsum.photos/200"}} />
