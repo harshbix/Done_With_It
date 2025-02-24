@@ -1,20 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Image, View, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { StyleSheet, Button, SafeAreaView } from 'react-native';
 
 export default function App() {
 
 
   return (
-    <View style={styles.container}>
-  <TouchableHighlight onPress={() => { console.log("clicked")}}>
-      <Image
-      source={  
-         {width: 400,
-        height: 300,
-        uri: "https://picsum.photos/200"}} />
-  </TouchableHighlight>
-      <StatusBar style="auto" />
-    </View>
+   <SafeAreaView style={styles.container}>
+    <Button title='Click Me' color={"black"} onPress={()=> alert('Button clicked!')}/>
+   </SafeAreaView>
   );
 }
 
@@ -25,4 +18,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  btn: {
+    backgroundColor: 'blue',
+    padding : 19,
+  }
 });
