@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from 'react-native';
 
 export default function App() {
 
@@ -9,7 +9,12 @@ const handlePress = () =>
 }
   return (
     <View style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>this is a very long text guys i wish i hadnt done something like that in a minute you know tory lanes</Text>
+      
+      {/* <Text >Hello World!</Text> */}
+      <Image source={  
+         {width: 400,
+        height: 300,
+        uri: "https://picsum.photos/200"}} />
       <StatusBar style="auto" />
     </View>
   );
@@ -18,7 +23,7 @@ const handlePress = () =>
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#c1c1c1',
     alignItems: 'center',
     justifyContent: 'center',
   },
