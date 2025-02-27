@@ -1,15 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button, SafeAreaView, Alert } from 'react-native';
+import { StyleSheet, SafeAreaView, Alert, TouchableOpacity, Text } from 'react-native';
 
 export default function App() {
-
-
   return (
-   <SafeAreaView style={styles.container}>
-    <Button title='Click Me' color={"black"} onPress={()=> Alert.prompt("The title", "Hey you modafaka", 
-    text => console.log(text)
-    )}/>
-   </SafeAreaView>
+    <SafeAreaView style={styles.container}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => Alert.alert('Button Clicked!')}
+      >
+        <Text style={styles.buttonText}>Click Me</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
   );
 }
 
@@ -20,8 +20,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  btn: {
-    backgroundColor: 'blue',
-    padding : 19,
-  }
+  button: {
+    backgroundColor: '#1E90FF',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+  },
 });
